@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @api_v1_user.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @api_v1_user.email %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @api_v1_user.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @api_v1_user.lastname %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @api_v1_user.title %>
+</p>
+
+<%= link_to 'Edit', edit_api_v1_user_path(@api_v1_user) %> |
+<%= link_to 'Back', api_v1_users_path %>
