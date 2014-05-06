@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506123158) do
+ActiveRecord::Schema.define(version: 20140506142851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,24 @@ ActiveRecord::Schema.define(version: 20140506123158) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "plots", force: true do |t|
+    t.string   "title"
+    t.integer  "price",            limit: 8
+    t.integer  "feature_id"
+    t.integer  "property_type_id"
+    t.integer  "region_id"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "town"
+    t.string   "postcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "plots", ["feature_id"], name: "index_plots_on_feature_id", using: :btree
+  add_index "plots", ["property_type_id"], name: "index_plots_on_property_type_id", using: :btree
+  add_index "plots", ["region_id"], name: "index_plots_on_region_id", using: :btree
 
   create_table "property_types", force: true do |t|
     t.string   "name"

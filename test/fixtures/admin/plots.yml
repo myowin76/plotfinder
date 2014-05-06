@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  price: 1
+  features_id: 
+  property_types_id: 
+  regions_id: 
+  address1: MyString
+  address2: MyString
+  town: MyString
+  postcode: MyString
+
+two:
+  title: MyString
+  price: 1
+  features_id: 
+  property_types_id: 
+  regions_id: 
+  address1: MyString
+  address2: MyString
+  town: MyString
+  postcode: MyString

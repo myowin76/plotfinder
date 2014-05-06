@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @admin_plot.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @admin_plot.price %>
+</p>
+
+<p>
+  <strong>Features:</strong>
+  <%= @admin_plot.features %>
+</p>
+
+<p>
+  <strong>Property types:</strong>
+  <%= @admin_plot.property_types %>
+</p>
+
+<p>
+  <strong>Regions:</strong>
+  <%= @admin_plot.regions %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @admin_plot.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @admin_plot.address2 %>
+</p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @admin_plot.town %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @admin_plot.postcode %>
+</p>
+
+<%= link_to 'Edit', edit_admin_plot_path(@admin_plot) %> |
+<%= link_to 'Back', admin_plots_path %>

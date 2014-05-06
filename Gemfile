@@ -16,6 +16,8 @@ gem 'simple_form'
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'geocoder'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'

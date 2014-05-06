@@ -1,0 +1,53 @@
+<%= form_for(@admin_plot) do |f| %>
+  <% if @admin_plot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_plot.errors.count, "error") %> prohibited this admin_plot from being saved:</h2>
+
+      <ul>
+      <% @admin_plot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :features_id %><br>
+    <%= f.text_field :features_id %>
+  </div>
+  <div class="field">
+    <%= f.label :property_types_id %><br>
+    <%= f.text_field :property_types_id %>
+  </div>
+  <div class="field">
+    <%= f.label :regions_id %><br>
+    <%= f.text_field :regions_id %>
+  </div>
+  <div class="field">
+    <%= f.label :address1 %><br>
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br>
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :town %><br>
+    <%= f.text_field :town %>
+  </div>
+  <div class="field">
+    <%= f.label :postcode %><br>
+    <%= f.text_field :postcode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
