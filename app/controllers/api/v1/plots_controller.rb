@@ -5,6 +5,10 @@ module Api
 			def index
 				@plots = Admin::Plot.all
 			end
+
+			def show
+        @plot = Admin::Plot.find(params[:id])
+      end
 		end
 	end
 end

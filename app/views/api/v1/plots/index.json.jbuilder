@@ -10,4 +10,5 @@ json.array! @plots do |plot|
   json.region plot.region.name
   json.latitude plot.latitude
   json.longitude plot.longitude
+  json.url url_for(plot)
 end
