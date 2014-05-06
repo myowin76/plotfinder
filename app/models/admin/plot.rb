@@ -5,7 +5,10 @@ class Admin::Plot < ActiveRecord::Base
 
 
   geocoded_by :full_address
-  after_validation :geocode, :if => :address_changed?
+  after_validation :geocode,
+  		:if => lambda{ |obj| obj.address_changed? }
+
+  # acts_as_gmappable :process_geocoding => false
 
 
   def region_name(id)
@@ -13,7 +16,11 @@ class Admin::Plot < ActiveRecord::Base
   end
 
   def full_address
-    [address1, address2 town, postcode, region_name(region_id)].compact.join(', ')
+    [address1, address2, town, postcode, region_name(region_id)].compact.join(', ')
     # TO DO
   end
+
+  def address_changed?
+	  address1_changed? || address2_changed?
+	end
 end

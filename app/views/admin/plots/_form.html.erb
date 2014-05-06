@@ -1,4 +1,4 @@
-<%= form_for(@admin_plot) do |f| %>
+<%= simple_form_for(@admin_plot) do |f| %>
   <% if @admin_plot.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_plot.errors.count, "error") %> prohibited this admin_plot from being saved:</h2>
@@ -20,16 +20,14 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :features_id %><br>
-    <%= f.text_field :features_id %>
+    <%= f.association :feature, collection: Admin::Feature.order(:name) %>
   </div>
   <div class="field">
-    <%= f.label :property_types_id %><br>
-    <%= f.text_field :property_types_id %>
+    
+    <%= f.association :property_type, collection: Admin::PropertyType.order(:name) %>
   </div>
   <div class="field">
-    <%= f.label :regions_id %><br>
-    <%= f.text_field :regions_id %>
+    <%= f.association :region, collection: Admin::Region.order(:name) %>
   </div>
   <div class="field">
     <%= f.label :address1 %><br>
